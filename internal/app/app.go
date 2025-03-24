@@ -32,7 +32,7 @@ func (a *App) Close() {
 }
 
 func (a *App) regusterRouters() {
-	taskGroup := a.api.Group("/task")
+	taskGroup := a.api.Group("/tasks")
 
 	taskGroup.Post("/", a.createTask)
 	taskGroup.Get("/", a.getAll)
